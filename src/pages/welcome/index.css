@@ -1,0 +1,22 @@
+.welcome__root {
+  padding: 115px 26px 0 26px;
+  height: calc(100vh - 35px);
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.welcome__button-container {
+  margin-top: 59px;
+}
+.welcome__footer {
+  display: flex;
+  justify-content: space-around;
+  height: 98px;
+}
+.welcome__hand {
+  position: relative;
+  top: 35px;
+  overflow: hidden;
+}

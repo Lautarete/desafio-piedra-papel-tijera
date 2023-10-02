@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+.game__root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 125px 0 0 0;
+}
+.show-hand {
+  padding: 0;
+  height: calc(100vh - 60px);
+}
+.show-results {
+  padding: 36px 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .show-results {
+    padding: 0;
+  }
+}
+.game__choice-container {
+  display: grid;
+  height: 244px;
+  overflow: hidden;
+  gap: 11px;
+  grid-template-columns: 103px 104px 124px;
+}
+.game__hand {
+  position: relative;
+  top: 35px;
+  overflow: hidden;
+}
+.game__hand-big {
+  width: 159px;
+  height: 356px;
+  position: relative;
+  bottom: -60px;
+  overflow: hidden;
+}
+.rotate {
+  transform: rotate(180deg);
+  top: 0px;
+}
+.chosen {
+  top: 15px;
+}
+.discarded {
+  top: 100px;
+  opacity: 0.5;
+}
+.game__button-container {
+  width: 335px;
+}

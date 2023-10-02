@@ -1,0 +1,17 @@
+{
+  "name": "piedra-papel-tijera",
+  "version": "1.0.0",
+  "author": "Lautaro Jara <lautarojra@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.0.0-rc.0"
+  },
+  "scripts": {
+    "dev": "parcel serve ./src/index.html",
+    "build": "parcel build .src/index.html --dist-dir build --public-url /nombredelrepo",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}

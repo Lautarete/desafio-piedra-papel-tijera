@@ -1,0 +1,11 @@
+.instructions__root {
+  padding: 129px 33px 0 33px;
+  height: calc(100vh - 35px);
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.instructions__text-container {
+  text-align: center;
+}
