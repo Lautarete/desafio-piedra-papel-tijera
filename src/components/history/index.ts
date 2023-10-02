@@ -1,4 +1,4 @@
-import { state } from "../../../state";
+import { state } from "../../state";
 //Nunca estube seguro si era mejor pasarle la data por parametros o si debia poder acceder al state
 
 export function initHistoryComp() {

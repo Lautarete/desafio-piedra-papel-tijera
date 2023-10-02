@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "parcel serve ./src/index.html",
-    "build": "parcel build .src/index.html --dist-dir build --public-url /nombredelrepo",
+    "build": "parcel build ./src/index.html --dist-dir build --public-url /desafio-piedra-papel-tijera",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {

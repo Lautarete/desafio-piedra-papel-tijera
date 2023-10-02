@@ -5,7 +5,7 @@ import { initHistoryComp } from "./components/history";
 import { initOptionComp } from "./components/options";
 import { initTextComp } from "./components/text";
 import { initRouter } from "./router";
-import { state } from "../state";
+import { state } from "./state";
 
 function main() {
   initTextComp();

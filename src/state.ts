@@ -5,8 +5,21 @@ const state = {
   listeners: [],
   init() {
     console.log("State Init");
-
-    const localData = localStorage.getItem("game-save-state");
+    let localData = localStorage.getItem("game-save-state");
+    if (localData == null || localData == "null") {
+      console.log("no hay local storage");
+      const gameSaveState = {
+        timeOver: false,
+        history: {
+          userWins: "0",
+          PCWins: "0",
+        },
+      };
+      localStorage.setItem("game-save-state", JSON.stringify(gameSaveState));
+    }
+    console.log("local data");
+    console.log(localData);
+    localData = localStorage.getItem("game-save-state");
     this.setState(JSON.parse(localData!));
   },
   getState() {

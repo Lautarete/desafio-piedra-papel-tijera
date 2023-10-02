@@ -18,14 +18,20 @@ export function initRouter(containerEl: Element | null) {
     },
   ];
 
+  const basePath = "/desafio-piedra-papel-tijera";
+  function isGithubPages() {
+    return location.host.includes("github.io");
+  }
   function goTo(path: string) {
-    history.pushState({}, "", path);
-    handleRoute(path);
+    const completePath = isGithubPages() ? basePath + path : path;
+    history.pushState({}, "", completePath);
+    handleRoute(completePath);
   }
 
   function handleRoute(route: string) {
+    const newRoute = isGithubPages() ? route.replace(basePath, "") : route;
     for (const r of routes) {
-      if (r.path.test(route)) {
+      if (r.path.test(newRoute)) {
         // console.log(containerEl);
 
         containerEl?.firstChild?.remove();
@@ -35,16 +41,7 @@ export function initRouter(containerEl: Element | null) {
     }
   }
 
-  // window.addEventListener("load", () => {
-  //   goTo("/welcome");
-  // });
-  // window.addEventListener("beforeunload", () => {
-  //   goTo("/welcome");
-  // });
-  // window.addEventListener("beforeprint", () => {
-  //   goTo("/welcome");
-  // });
-  if (location.pathname == "/") {
+  if (location.pathname == "/desafio-piedra-papel-tijera/") {
     goTo("/welcome");
   } else {
     handleRoute(location.pathname);
