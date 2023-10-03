@@ -40,7 +40,6 @@ export function initRouter(containerEl: Element | null) {
       }
     }
   }
-
   if (location.pathname == "/desafio-piedra-papel-tijera/") {
     goTo("/welcome");
   } else {
